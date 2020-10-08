@@ -1,5 +1,5 @@
 export function initRegister() {
-    const registerform = document.forms.register;
+    const registerForm = document.forms.register;
     const registerForm = document.getElementById("registerForm");
     const btnReg = document.getElementById("btnReg");
 
@@ -76,7 +76,7 @@ const formHelper = {
 
 // слушатели:
 //на форму-> передает из импутов в хелпер value & name
-registerform.addEventListener("input", (event) => {
+registerForm.addEventListener("input", (event) => {
     const value = event.target.value;
     const name = event.target.name;
   
@@ -89,7 +89,7 @@ registerform.addEventListener("input", (event) => {
     classInvalidAdd(event.target, formHelper[name].valid); 
 });
 
-registerform.addEventListener("submit", (event) => {
+registerForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = formHelper.getData();
      console.log(data);
@@ -103,6 +103,6 @@ function handleAddValid(node, isValid) {
         node.classList.remove("invalid");
     }
 }
-return {registerform, }
+return {registerForm}
 } 
 

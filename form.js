@@ -4,7 +4,7 @@ import{initRegister} from "./register.js";
 import {user} from "./constans";
 
 const {loginForm, setDisabledButtonState} = initLogin();
-conet {registerform, handleAddValid} = initRegister();
+conet {registerForm} = initRegister();
 
 
 
@@ -15,8 +15,8 @@ conet {registerform, handleAddValid} = initRegister();
 //const registerForm = document.getElementById("registerForm");
 
 
-//const btnReg = document.getElementById("btnReg");
-//const btnLog = document.getElementById("btnLog");
+const btnReg = document.getElementById("btnReg");
+const btnLog = document.getElementById("btnLog");
 
 //const loginEmail = document.getElementById("loginInput");
 //const loginPassword = document.getElementById("passwordInput");
