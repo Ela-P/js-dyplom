@@ -1,6 +1,7 @@
 import {INVALID_CLASS} from "./constans.js"
 import {initLogin} from "./login.js";
 import{initRegister} from "./register.js";
+import {user} from "./constans";
 
 const {loginForm, setDisabledButtonState} = initLogin();
 conet {registerform, handleAddValid} = initRegister();

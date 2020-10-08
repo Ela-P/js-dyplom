@@ -1,10 +1,5 @@
 export function initLogin() {
-    const user = {
-        email: "aaa@.ru",
-        password: 123,
-        name: "Erik",
-    };
-    
+  
 
 const loginForm = document.getElementById("loginForm");
 
