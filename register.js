@@ -1,5 +1,4 @@
 export function initRegister() {
-    const registerForm = document.forms.register;
     const registerForm = document.getElementById("registerForm");
     const btnR = document.getElementById("btnR");
 

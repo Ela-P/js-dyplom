@@ -1,7 +1,7 @@
 import {INVALID_CLASS} from "./constans.js"
 import {initLogin} from "./login.js";
 import{initRegister} from "./register.js";
-import {user} from "./constans";
+import {user} from "./constans.js";
 
 const {loginForm, setDisabledButtonState} = initLogin();
 const {registerForm} = initRegister();
@@ -37,7 +37,7 @@ function setRegisterFormActive() {
     registerForm.style.display = "block"; 
     btnLog.classList.remove("active-btn");
     btnReg.classList.add("active-btn"); 
-    btn.disabled = !formHelper.checkFormValid();
+  //  btn.disabled = !formHelper.checkFormValid();
 }
 
 //login 

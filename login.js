@@ -8,7 +8,7 @@ const loginEmail = document.getElementById("loginEmailInput");
 const loginPassword = document.getElementById("loginPasswordInput");
 
 loginEmail.addEventListener("input", eventHandler);
-loginPassword.dadEventListener("input", eventHandler);
+loginPassword.addEventListener("input", eventHandler);
 
 function eventHandler(event) {
     const addInvalidClass = event.target.classList.contains(INVALID_CLASS);
