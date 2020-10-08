@@ -1,7 +1,7 @@
 import {INVALID_CLASS} from "./constans.js";
 import {initLogin} from "./login.js";
 import{initRegister} from "./register.js";
-import {user} from "./constans.js";
+import {users} from "./constans.js";
 
 const {loginForm, setDisabledButtonState} = initLogin();
 const {registerForm} = initRegister();
