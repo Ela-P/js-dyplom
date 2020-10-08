@@ -2,14 +2,13 @@ export function initLogin() {
   
 
 const loginForm = document.getElementById("loginForm");
+const btnL = document.getElementById("btnL");
 
-const btnLog = document.getElementById("btnLog");
-
-const loginEmail = document.getElementById("loginInput");
-const loginPassword = document.getElementById("passwordInput");
+const loginEmail = document.getElementById("loginEmailInput");
+const loginPassword = document.getElementById("loginPasswordInput");
 
 loginEmail.addEventListener("input", eventHandler);
-loginPassword.daddEventListener("input", eventHandler);
+loginPassword.dadEventListener("input", eventHandler);
 
 function eventHandler(event) {
     const addInvalidClass = event.target.classList.contains(INVALID_CLASS);
@@ -37,9 +36,9 @@ function classInvalidAdd(domNode, isValid) {
 
 function setDisabledButtonState() {
     if (loginEmail.value === "" || loginPassword.value === "") {
-        btnLog.disabled = true;
+        btnL.disabled = true;
     } else {
-        btnLog.disabled = false;
+        btnL.disabled = false;
     }
 }
     return {loginForm, setDisabledButtonState}

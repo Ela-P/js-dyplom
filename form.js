@@ -4,7 +4,7 @@ import{initRegister} from "./register.js";
 import {user} from "./constans";
 
 const {loginForm, setDisabledButtonState} = initLogin();
-conet {registerForm} = initRegister();
+const {registerForm} = initRegister();
 
 
 

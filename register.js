@@ -1,7 +1,7 @@
 export function initRegister() {
     const registerForm = document.forms.register;
     const registerForm = document.getElementById("registerForm");
-    const btnReg = document.getElementById("btnReg");
+    const btnR = document.getElementById("btnR");
 
 const formHelper = {
     login: {
@@ -85,7 +85,7 @@ registerForm.addEventListener("input", (event) => {
     bindValid(value); 
     handleAddValid(event.target, formHelper[name].valid)
 
-    btn.disabled = !formHelper.checkFormValid(); 
+    btnR.disabled = !formHelper.checkFormValid(); 
     classInvalidAdd(event.target, formHelper[name].valid); 
 });
 
