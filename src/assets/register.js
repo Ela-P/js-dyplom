@@ -1,8 +1,10 @@
+import { INVALID_CLASS } from "./constants";
+
 export function initRegister() {
     const registerForm = document.getElementById("registerForm");
     const btnR = document.getElementById("btnR");
 
-const formHelper = {
+    const formHelper = {
     login: {
         value: "",
         valid: false,
@@ -71,37 +73,50 @@ const formHelper = {
             password: this.password.value,
         };
     },
-};
+    };
 
-// слушатели:
-//на форму-> передает из импутов в хелпер value & name
-registerForm.addEventListener("input", (event) => {
+
+    function classInvalidAdd(domNode, isValid) {
+    if (isValid) {
+        domNode.classList.remove(INVALID_CLASS)
+    } else {
+        domNode.classList.add(INVALID_CLASS)
+    }
+    }
+        // слушатели:
+    //на форму-> передает из импутов в хелпер value & name
+    registerForm.addEventListener("input", (event) => {
     const value = event.target.value;
     const name = event.target.name;
   
     formHelper[name].value = value;
     const bindValid = formHelper[name].checkValidation.bind(formHelper);
     bindValid(value); 
-    handleAddValid(event.target, formHelper[name].valid)
+    handleAddValid(event.target, formHelper[name].valid);
+    registerButtonDisabled();
 
     btnR.disabled = !formHelper.checkFormValid(); 
     classInvalidAdd(event.target, formHelper[name].valid); 
-});
+        });
 
-registerForm.addEventListener("submit", (event) => {
+    registerForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const data = formHelper.getData();
      console.log(data);
-});
+    });
 
-function handleAddValid(node, isValid) {
-    if (!isValid && !node.classList.contans("invalid")) {
-        node.classList.add("invalid");
+    function handleAddValid(node, isValid) {
+    if (!isValid && !node.classList.contans(INVALID_CLASS)) {
+        node.classList.add(INVALID_CLASS);
     }
-    if (isValid && node.classList.contans("invalid")) {
-        node.classList.remove("invalid");
+    if (isValid && node.classList.contans(INVALID_CLASS)) {
+        node.classList.remove(INVALID_CLASS);
     }
-}
-return {registerForm}
+    }
+    function registerButtonDisabled() {
+    btnR.disabled = !formHelper.checkFormValid();
+  }
+
+    return {registerForm, registerButtonDisabled};
 } 
 
