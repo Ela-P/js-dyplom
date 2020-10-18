@@ -1,9 +1,6 @@
 import { INVALID_CLASS } from "../constants";
 
 export function initLogin() {
-   
-
-
 
     const loginForm = document.getElementById("loginForm");
     const btnL = document.getElementById("btnL");

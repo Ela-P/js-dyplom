@@ -33,3 +33,4 @@ export function makeTable(arrUsers)    {
       }
     }
 }
+makeTable(arrUsers);
