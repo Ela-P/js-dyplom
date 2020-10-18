@@ -1,11 +1,7 @@
-import { INVALID_CLASS } from "./constants";
+import { INVALID_CLASS } from "../constants";
 
 export function initLogin() {
-    const user = {
-        name: "Erik",
-        email: "aaa@.ru",
-        password: 123
-    };
+   
 
 
 
