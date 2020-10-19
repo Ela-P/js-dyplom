@@ -1,4 +1,4 @@
-
+import {makeTable} from "./createClients";
 import "./clients.scss";
 export const arrUsers = [
     {
