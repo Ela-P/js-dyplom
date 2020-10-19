@@ -1,5 +1,6 @@
 import {makeTable} from "./createClients";
 import "./clients.scss";
+import {makeClientsTotal} from "./clientsTotal";
 export const arrUsers = [
     {
         name: "Alex",
@@ -63,4 +64,5 @@ export const arrUsers = [
 ];
 export const initClients = () => {
     makeTable(arrUsers);
+    makeClientsTotal(arrUsers);
 };
