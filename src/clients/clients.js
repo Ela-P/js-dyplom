@@ -8,7 +8,7 @@ export const arrUsers = [
         phone: +375292929292,
         balance: "$130,323",
         isActive: false,
-        gender: "female"
+        gender: "Male"
     },
 
     {
@@ -18,7 +18,7 @@ export const arrUsers = [
         phone: +3752929255555,
         balance: "$11,353",
         isActive: true,
-        gender: "female"
+        gender: "Male"
     },
 
     {
@@ -28,7 +28,7 @@ export const arrUsers = [
         phone: +375295556898,
         balance: "$55,355",
         isActive: true,
-        gender: "Mele"
+        gender: "female"
     },
 
     {
@@ -38,7 +38,7 @@ export const arrUsers = [
         phone: +375292986965,
         balance: "$15,236",
         isActive: false,
-        gender: "female"
+        gender: "Male"
     },
 
     {
@@ -48,7 +48,7 @@ export const arrUsers = [
         phone: +375292523696,
         balance: "$19,237",
         isActive: false,
-        gender: "female"
+        gender: "Male"
     },
 
     {
@@ -58,7 +58,7 @@ export const arrUsers = [
         phone: +375291236361,
         balance: "$15,346",
         isActive: false,
-        gender: "Mele"
+        gender: "female"
     },
 ];
 export const initClients = () => {
