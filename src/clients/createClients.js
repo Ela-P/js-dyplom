@@ -1,7 +1,14 @@
+import { ROOT_NODE } from "../constants";
 import {arrUsers} from "./clients";
+import {makeUsersTotal} from "./clientsTotal";
  
-
+const template = `
+        <p id="male"> Male: </p>
+        <p id="female"> Female: </p>
+        <p id="UsersBalance"> Max balance: </p>
+        `;
 export function makeTable(arrUsers)    {
+  ROOT_NODE.innerHTML = template;
     const table = document.createElement('table');
     for (let i = 0; i < arrUsers.length; i++) {
         const row = document.createElement("tr");
@@ -9,6 +16,10 @@ export function makeTable(arrUsers)    {
         const btn = document.createElement("button");
         btn.innerHTML = "Delete";
         row.appendChild(tdDelete);
+        
+        ROOT_NODE.appendChild(table);
+
+        makeUsersTotal(arrUsers);
         
         const { name, company, email, phone, balance } = arrUsers[i];
         for (const value of [name, company, email, phone, balance]) {
@@ -30,5 +41,5 @@ export function makeTable(arrUsers)    {
       
     
     }
-    return document.body.appendChild(table);
+   // return document.body.appendChild(table);
 }

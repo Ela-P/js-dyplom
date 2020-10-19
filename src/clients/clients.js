@@ -1,6 +1,5 @@
 import {makeTable} from "./createClients";
 import "./clients.scss";
-import {makeClientsTotal} from "./clientsTotal";
 export const arrUsers = [
     {
         name: "Alex",
@@ -9,7 +8,7 @@ export const arrUsers = [
         phone: +375292929292,
         balance: "$130,323",
         isActive: false,
-        gender: "Male"
+        gender: "male"
     },
 
     {
@@ -19,7 +18,7 @@ export const arrUsers = [
         phone: +3752929255555,
         balance: "$11,353",
         isActive: true,
-        gender: "Male"
+        gender: "male"
     },
 
     {
@@ -39,7 +38,7 @@ export const arrUsers = [
         phone: +375292986965,
         balance: "$15,236",
         isActive: false,
-        gender: "Male"
+        gender: "male"
     },
 
     {
@@ -49,7 +48,7 @@ export const arrUsers = [
         phone: +375292523696,
         balance: "$19,237",
         isActive: false,
-        gender: "Male"
+        gender: "male"
     },
 
     {
