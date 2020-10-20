@@ -6,7 +6,7 @@ export const arrUsers = [
         company: "Google",
         email: "alex@gmail.com",
         phone: +375292929292,
-        balance: "$130,323",
+        balance: 130,
         isActive: false,
         gender: "male"
     },
@@ -16,7 +16,7 @@ export const arrUsers = [
         company: "Amazon",
         email: "ole@gmail.com",
         phone: +3752929255555,
-        balance: "$11,353",
+        balance: 11,
         isActive: true,
         gender: "male"
     },
@@ -26,7 +26,7 @@ export const arrUsers = [
         company: "Apple",
         email: "oles@gmail.com",
         phone: +375295556898,
-        balance: "$55,355",
+        balance: 55,
         isActive: true,
         gender: "female"
     },
@@ -36,7 +36,7 @@ export const arrUsers = [
         company: "Epam",
         email: "pit@gmail.com",
         phone: +375292986965,
-        balance: "$15,236",
+        balance: 15,
         isActive: false,
         gender: "male"
     },
@@ -46,7 +46,7 @@ export const arrUsers = [
         company: "Odopod",
         email: "K.ol@gmail.com",
         phone: +375292523696,
-        balance: "$19,237",
+        balance: 19,
         isActive: false,
         gender: "male"
     },
@@ -56,7 +56,7 @@ export const arrUsers = [
         company: "Blammo",
         email: "V.blam@gmail.com",
         phone: +375291236361,
-        balance: "$15,346",
+        balance: 15,
         isActive: false,
         gender: "female"
     },
