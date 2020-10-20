@@ -1,8 +1,8 @@
 
   export  function makeUsersTotal(arrUsers)    {
-    const pGenderMaleTotal = document.getElementById("male");
-    const pGenderFemaleTotal = document.getElementById("female");
-    const pMaxTotalUsersBalance = document.getElementById("UsersBalance");
+    const spanGenderMaleTotal = document.getElementById("male");
+    const spanGenderFemaleTotal = document.getElementById("female");
+    const spanMaxTotalUsersBalance = document.getElementById("UsersBalance");
 
     let genderMaleTotal = 0;
     let genderFemaleTotal = 0;
@@ -11,20 +11,22 @@
     for (let i = 0; i < arrUsers.length; i++) {
         if (arrUsers[i].gender === "male") {
             genderMaleTotal = genderMaleTotal + 1;
-            pGenderMaleTotal.innerText = genderMaleTotal;
+            spanGenderMaleTotal.innerText = genderMaleTotal;
         }
 
         if (arrUsers[i].gender === "female") {
             genderFemaleTotal = genderFemaleTotal + 1;
-            pGenderFemaleTotal.innerText = genderFemaleTotal;
+            spanGenderFemaleTotal.innerText = genderFemaleTotal;
            
         }
 
         if (arrUsers[i].balance > maxTotalUsersBalance) {
             maxTotalUsersBalance = arrUsers[i].balance;
-            pMaxTotalUsersBalance.innerText = maxTotalUsersBalance;
+            spanMaxTotalUsersBalance.innerText = maxTotalUsersBalance;
             
         }
+       
     }
        
-}
+  }      
+

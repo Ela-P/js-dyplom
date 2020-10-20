@@ -2,17 +2,17 @@ import { ROOT_NODE } from "../constants";
 import {arrUsers} from "./clients";
 import {makeUsersTotal} from "./clientsTotal";
  
-const template = `
-        <p id="male"> Male: </p>
-        <p id="female"> Female: </p>
-        <p id="UsersBalance"> Max balance: </p>
-        `;
+const template = `<div class= "totalUsers">
+<div class= "usersView"> Male: <span id="male"></span></div>
+<div class= "usersView"> Female: <span id="female"></span></div>
+<div class= "usersView"> Max balance: <span id="UsersBalance"></span></div>
+</div>`;
 export function makeTable(arrUsers)    {
   ROOT_NODE.innerHTML = template;
     const table = document.createElement('table');
     for (let i = 0; i < arrUsers.length; i++) {
         const row = document.createElement("tr");
-       const tdDelete = document.createElement('td');
+        const tdDelete = document.createElement('td');
         const btn = document.createElement("button");
         btn.innerHTML = "Delete";
         row.appendChild(tdDelete);
@@ -20,6 +20,8 @@ export function makeTable(arrUsers)    {
         ROOT_NODE.appendChild(table);
 
         makeUsersTotal(arrUsers);
+
+     
         
         const { name, company, email, phone, balance } = arrUsers[i];
         for (const value of [name, company, email, phone, balance]) {
@@ -38,8 +40,11 @@ export function makeTable(arrUsers)    {
           arrUsers.splice(indexToDelete, 1);
           row.remove();
     });
-      
     
-    }
-   // return document.body.appendChild(table);
+    if (arrUsers[i].isActive === true ) {
+      row.classList.add("activUsers");
+      } else {
+      row.classList.add("noActivUsers");
+      }
+  }
 }
