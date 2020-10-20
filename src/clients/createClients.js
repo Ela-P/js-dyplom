@@ -5,7 +5,7 @@ import {makeUsersTotal} from "./clientsTotal";
 const template = `<div class= "totalUsers">
 <div class= "usersView"> Male: <span id="male"></span></div>
 <div class= "usersView"> Female: <span id="female"></span></div>
-<div class= "usersView"> Max balance: <span id="UsersBalance"></span></div>
+<div class= "usersView"> Max balance $: <span id="UsersBalance"></span></div>
 </div>`;
 export function makeTable(arrUsers)    {
   ROOT_NODE.innerHTML = template;
