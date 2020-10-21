@@ -4,14 +4,8 @@ import { initForm } from "./form/form";
 import "./././assets/styles/styleRoot.scss";
 
 
-const template = ` <nav class= "rootNav">
-    <a class= "navView" href="#/form"> Form </a>
-    <a class= "navView" href="#/clients"> Clients </a>
-    </nav> `;
-
-
 const router = () => {
-    ROOT_NODE.innerHTML = template;
+   
     if (window.location.hash ===`#/clients`) {
         logProtector(initClients);
     } if (window.location.hash ===`#/form`) {
