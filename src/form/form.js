@@ -4,10 +4,11 @@ import {ROOT_NODE} from "../constants";
 import "./form.scss";
 
 
-const template = `
+const template = `<div class="container">
 <div class="buttons">
 <a href="#formRegister"><button class="click" class="clickReg" id="btnReg"> Register </button></a>
 <a href="#loginForm"><button class="click"  class="clickLog" id="btnLog"> Login </button></a>
+</div>
 </div>
 <div class="container">
 <form class="view-form" name="register" id="registerForm" novalidate>
@@ -46,7 +47,6 @@ export const initForm = () => {
         registerForm.style.display = "none";
         btnLog.classList.add("active-btn");
         btnReg.classList.remove("active-btn");
-
         setDisabledButtonState();
     }
 
