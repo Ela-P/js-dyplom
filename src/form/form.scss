@@ -2,17 +2,16 @@
     display: flex;
     justify-content: center;
     margin: 0 450px;
-  
+    background-color: hsl(280, 100%, 75%);
 }
 
 .click {
     color: #fafeff;
-    width: 300px;
+    width: 100px;
     height: 50px;
-    border: 3px solid #6847c9;
-    background-color: #9dbef0;
+    border: 3px solid hsl(255, 55%, 53%);
+    background-color: hsl(216, 73%, 78%);
     text-align: center; 
-    border-radius: 5px;
     margin: 10px;
   }
 
@@ -20,7 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .view-form {
@@ -33,35 +32,29 @@
 
 
 .view-input {
-    width: 300px;
+    width: 250px;
     height: 30px;
-    border: 3px solid #1a80b7;
-    background-color: #baf5eb;
+    border: 3px solid hsl(201, 75%, 41%);
+    background-color: hsl(170, 75%, 85%);
     color: black;
-    border-radius: 5px;
     margin-bottom: 3px;
-    
 }
 
 .view-button {
-    color: #fafeff;
-    width: 300px;
+    color: hsl(192, 100%, 99%);
+    width: 250px;
     height: 50px;
-    border: 3px solid #6847c9;
-    background-color: #fa77a0;
-    text-align: center; 
-    border-radius: 5px;
-   
+    border: 3px solid hsl(255, 55%, 53%);
+    background-color: hsl(341, 100%, 81%);
+    text-align: center;  
 }
 
 .invalid {
-    border: 5px solid red;
-  
+    border: 5px solid hsl(307, 100%, 65%);
 }
 
-
 .active-btn {
-    border: 3px solid #231356;
-    background-color: #ab1b48;
+    border: 3px solid hsl(254, 100%, 40%);
+    background-color: hsl(314, 100%, 50%);
 }
 
