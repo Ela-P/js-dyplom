@@ -63,5 +63,4 @@ export const arrUsers = [
 ];
 export const initClients = () => {
     makeTable(arrUsers);
-    makeClientsTotal(arrUsers);
-};
+  };

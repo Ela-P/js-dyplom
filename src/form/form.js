@@ -4,13 +4,13 @@ import {ROOT_NODE} from "../constants";
 import "./form.scss";
 
 
-const template = `<div class="container">
+const template = `<div class="containerBtn">
 <div class="buttons">
 <a href="#formRegister"><button class="click" class="clickReg" id="btnReg"> Register </button></a>
 <a href="#loginForm"><button class="click"  class="clickLog" id="btnLog"> Login </button></a>
 </div>
 </div>
-<div class="container">
+<div class="container ">
 <form class="view-form" name="register" id="registerForm" novalidate>
 <input class="view-input" name="login" placeholder="Login" type="login" id="loginInput">
 <input class="view-input" name="name" placeholder="Name" type="name" id="nameInput">
@@ -21,7 +21,6 @@ const template = `<div class="container">
 <input class="view-input" name="repeatPassword" placeholder="Repeat Password" type="RepeatPassword" id="repeatPassword">
 <button class="view-button" id="btnR"> Register </button>
 </form>
-
 
 <form class="view-form" name="login" id="loginForm" novalidate>
 <input class="view-input" name="login" placeholder="Login" type="login" id="loginInput"> 
@@ -34,6 +33,7 @@ const template = `<div class="container">
 
 export const initForm = () => {
     ROOT_NODE.innerHTML = template;
+
     const { loginForm, setDisabledButtonState } = initLogin();
     const { registerForm, registerButtonDisabled } = initRegister();
 
@@ -41,6 +41,10 @@ export const initForm = () => {
     const btnReg = document.getElementById("btnReg");
     const btnLog = document.getElementById("btnLog");
 
+    btnLog.addEventListener("click", setLoginFormActive);
+    btnReg.addEventListener("click", setRegisterFormActive);
+
+    setLoginFormActive();
 
     function setLoginFormActive() {
         loginForm.style.display = "block";
@@ -49,7 +53,7 @@ export const initForm = () => {
         btnReg.classList.remove("active-btn");
         setDisabledButtonState();
     }
-
+   
     function setRegisterFormActive() {
         loginForm.style.display = "none";
         registerForm.style.display = "block";
@@ -57,9 +61,9 @@ export const initForm = () => {
         btnReg.classList.add("active-btn");
         registerButtonDisabled();
     }
-
-    //login 
-    btnLog.addEventListener("click", setLoginFormActive);
-    btnReg.addEventListener("click", setRegisterFormActive);
-
+    
+   
+    
+   
 }
+  

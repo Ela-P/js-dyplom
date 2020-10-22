@@ -1,17 +1,17 @@
 import { initClients } from "./clients/clients";
 import { ROOT_NODE } from "./constants";
 import { initForm } from "./form/form";
-import "./././assets/styles/styleRoot.scss";
+import "./assets/styles/styleRoot.scss";
 
 
 const router = () => {
    
     if (window.location.hash ===`#/clients`) {
         logProtector(initClients);
-    } if (window.location.hash ===`#/form`) {
+    } else if (window.location.hash ===`#/form`) {
         initForm();
     } else {
-        ROOT_NODE.innerHTML =`<div>Page not found </div>`
+      //  ROOT_NODE.innerHTML =`<div>Page not found </div>`
     }
 }
 

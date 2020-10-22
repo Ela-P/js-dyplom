@@ -36,9 +36,11 @@ export function makeTable(arrUsers)    {
         table.appendChild(row);
        
         btn.addEventListener("click", function(event) {
-          const indexToDelete =  arrUsers.indexOf(arrUsers[i]);
+          const indexToDelete =  arrUsers.findIndex((user) => 
+          user.email === email);
           arrUsers.splice(indexToDelete, 1);
           row.remove();
+          makeUsersTotal(arrUsers);
     });
     
     if (arrUsers[i].isActive === true ) {
